@@ -32,10 +32,10 @@ public class InventoryTest {
         item.addWeight(0.500);
         assertEquals(1, item.getCount());
         assertEquals(0.500, item.getWeight(),0.001);
+
     }
     @org.junit.Test
     public void weightinTest() {
-                                                                                                                                                                                                                                item.addItem(2);
         item.addWeight(4);
         assertEquals(2, item.getCount());
         assertEquals(4, item.getWeight(),0.001);
@@ -43,6 +43,21 @@ public class InventoryTest {
         item.addWeight(8);
         assertEquals(5, item.getCount());
         assertEquals(12, item.getWeight(),0.001);
+        item.addItem(2);
+
+    }
+
+    @org.junit.Test
+    public void omloopsnelheidTest1() {
+
+        item.addItem(1);
+        item.addWeight(2.5);
+        assertEquals ( 0, item.Omloopsnelheid(false, false,4.2,"kaas"), 0.001);
+        assertEquals ( 1, item.Omloopsnelheid(true, true,4.2,"kaas"), 0.001);
+        assertEquals (0 , item.Omloopsnelheid(false, false,3.05,"kaas"), 0.001);
+        assertEquals ( 1, item.Omloopsnelheid(true, true,3.05,"kaas"), 0.001);
+        assertEquals ( 0, item.Omloopsnelheid(false, false,2.1,"kaas"), 0.001);
+        assertEquals ( 1, item.Omloopsnelheid(true, true,2.1,"kaas"), 0.001);
 
     }
 }

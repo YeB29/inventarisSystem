@@ -1,6 +1,13 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
 public class Inventory {
         private double weight;
         private int count;
+        private boolean status;
+        private boolean houdsbaarheid;
+        private double omloopsnelheid;
     public Inventory(){
         reset();
     }
@@ -35,5 +42,26 @@ public class Inventory {
     }
 
 
+    public double Omloopsnelheid(boolean status, boolean houdsbaarheid, double omloopsnelheid, String product) {
+        Scanner s = new Scanner(System.in);
+        double average = s.nextDouble();
+
+         if( status) {
+             return 0.0;
+         }
+        else if (houdsbaarheid) {
+            if(product.equals("kaas")){
+            return count;
+        }
+
+        if(omloopsnelheid>= average) {
+            return omloopsnelheid;
+        }
+
+        }
+        return 0.0;
 
     }
+}
+
+
