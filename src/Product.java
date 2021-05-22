@@ -1,18 +1,34 @@
-public class Product {
-    private String name;
-    private String productId;
+import java.time.LocalDate;
 
-    public Product(String name, String productId){
+public class Product {
+    private Integer productId;
+    private String name;
+    private Double weight;
+    private LocalDate expirationDate;
+
+    public Product(String name, Integer productId,Double weight, LocalDate expirationDate){
         this.name= name;
         this.productId = productId;
+        this.weight = weight;
+        this.expirationDate = expirationDate;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getProductId() {
+    public Integer getProductId() {
         return productId;
     }
+
+    public Double getWeight() {
+        return weight;
+    }
+
+    public LocalDate getExpirationDate() {
+        return expirationDate;
+    }
+
+
 }
 
